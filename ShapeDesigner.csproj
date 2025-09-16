@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Controllers\CommandController.cs" />
+    <Compile Include="Commands\Interfaces\IUndoRedoCommand.cs" />
+    <Compile Include="Commands\Models\AddCommand.cs" />
+    <Compile Include="Commands\Models\ChangeCommand.cs" />
+    <Compile Include="Commands\Models\FillColorCommand.cs" />
+    <Compile Include="Commands\Models\OutlineCommand.cs" />
+    <Compile Include="Commands\Models\RemoveCommand.cs" />
+    <Compile Include="Commands\Models\ResizeCommand.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +87,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\ShapeDesigner.Models\ShapeDesigner.Models.csproj">
+      <Project>{3d948fc4-3911-4f15-af48-f231bc7a8381}</Project>
+      <Name>ShapeDesigner.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
